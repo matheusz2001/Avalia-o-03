@@ -1,0 +1,33 @@
+﻿<Window x:Class="Avaliação_02.View.WindowFrequencia"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avaliação_02.View"
+        mc:Ignorable="d"
+        Title="frequencia" Height="450" Width="739" Background="#23262B">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="51" Margin="0,10,0,0" Stroke="orange" VerticalAlignment="Top" Width="711"/>
+        <Rectangle HorizontalAlignment="Left" Height="338" Margin="0,74,0,0" Stroke="orange" VerticalAlignment="Top" Width="711"/>
+        <!-- main name -->
+        <Label x:Name="LabelCadastrarFrequencia" Foreground="White" Content="Cadastrar Frequência" HorizontalAlignment="Left" Margin="22,16,0,0" VerticalAlignment="Top" FontSize="26" FontFamily="Segoe UI Black" Width="436"/>
+        <!-- id -->
+        <Label x:Name="LabelID" Foreground="White" Content="ID:" HorizontalAlignment="Left" Margin="31,92,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="42" Width="241" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Text="{Binding Id}" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" Margin="31,134,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="72" IsEnabled="False"/>
+        <!-- id aluno -->
+        <TextBox HorizontalAlignment="Left" Text="{Binding AlunoId}" Margin="195,134,0,0" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <!-- cpf aluno -->
+        <!-- cpf -->
+        <TextBox x:Name="TextBoxCPF" TabIndex="2" Text="{Binding Cpf}" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="404,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="23" FontSize="16"/>
+        <Label x:Name="LabelIdAluno" Foreground="White" Content="ID Aluno:" HorizontalAlignment="Left" Margin="195,94,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="44" Width="248" FontSize="20"/>
+        <Label x:Name="LabelCPF" Foreground="White" Content="CPF Aluno:" HorizontalAlignment="Left" Margin="404,95,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="42" Width="241" FontSize="20"/>
+        <Label x:Name="LabelEntrada" Foreground="White" Content="Entrada:" HorizontalAlignment="Left" Margin="22,178,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="35" Width="250" FontSize="20"/>
+        <Label x:Name="LabelSaida" Foreground="White" Content="Saída:" HorizontalAlignment="Left" Margin="25,254,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="54" Width="215" FontSize="20"/>
+        <TextBox x:Name="TextBoxDateSaida"   Text="{Binding Saida}" HorizontalAlignment="Left" Margin="31,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284"/>
+        <TextBox x:Name="TextBoxDateEntrada" Text="{Binding Entrada}" HorizontalAlignment="Left" Margin="31,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284"/>
+        <Button Content="Pesquisar" Command="{Binding BuscarAlunoCommand}" CommandParameter="{Binding Text, ElementName=TextBoxCPF}" HorizontalAlignment="Left" Margin="574,131,0,0" VerticalAlignment="Top" Width="57" Height="23" />
+        <Button x:Name="ButtonFechar" Background="Orange" Foreground="White" Content="Fechar" HorizontalAlignment="Left" Margin="31,342,0,0" VerticalAlignment="Top" Height="42" Width="146" RenderTransformOrigin="0.5,0.5" Click="ButtonFechar_Click"/>
+        <Button x:Name="ButtonSalvar" Command="{Binding SalvarFrequenciaCommand}" Background="Orange" Foreground="White" Content="Salvar" HorizontalAlignment="Left" Margin="262,342,0,0" VerticalAlignment="Top" Height="42" Width="146" RenderTransformOrigin="0.5,0.5"/>
+    </Grid>
+</Window>

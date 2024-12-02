@@ -1,0 +1,22 @@
+﻿<Page x:Class="Avaliação_02.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Avaliação_02"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Home">
+
+    <Grid Background="#23262B" Margin="34,0,0,-98" RenderTransformOrigin="0.517,0.497" >
+        <Label Content="ACADEMIA DO ZÉ "
+                   Foreground="#FFB9A419"
+                   FontFamily="Segoe UI Black" FontSize="24"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left" Margin="271,83,0,0" Width="325" HorizontalContentAlignment="Center" />
+        <Image HorizontalAlignment="Left" Height="322" Margin="297,162,0,0" VerticalAlignment="Top" Width="234" Source="/artpoin-emoji-para-whatsapp67.png"/>
+        <Button x:Name="button_home_fechar" Content="" Background="#FF8A1414" HorizontalAlignment="Left" Margin="716,10,0,0" VerticalAlignment="Top" Width="20" Click="button_home_fechar_Click"/>
+
+
+    </Grid>
+</Page>

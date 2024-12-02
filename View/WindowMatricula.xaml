@@ -1,0 +1,44 @@
+﻿<Window x:Class="Avaliação_02.View.WindowMatricula"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avaliação_02.View"
+        mc:Ignorable="d"
+        Title="WindowMatricula" Background="#23262B" Height="617" Width="1096">
+
+    <Window.Resources>
+        <local:ByteArrayToImageConverter x:Key="ByteArrayToImageConverter"/>
+    </Window.Resources>
+
+    <Grid Margin="0,0,-98,-104">
+        <Label x:Name="LabelCadastrarMatricula" Foreground="White" Content="Cadastrar Matricula" HorizontalAlignment="Left" Margin="24,16,0,0" VerticalAlignment="Top" FontSize="25" FontFamily="Segoe UI Black"/>
+        <Label x:Name="LabelID" Foreground="White" Content="ID:" HorizontalAlignment="Left" Margin="31,83,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="43" Width="185" FontSize="20"/>
+        <TextBox x:Name="TextBoxID" Text="{Binding Id}" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="35,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Height="23" FontSize="16" IsEnabled="False"/>
+        <Label x:Name="LabelIdAluno" Foreground="White" Content="ID Aluno:" HorizontalAlignment="Left" Margin="216,83,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="53" Width="314" FontSize="20"/>
+        <TextBox x:Name="TextBoxIdAluno" Text="{Binding AlunoId}" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="218,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Height="23" FontSize="16"/>
+        <Label x:Name="LabelCPF" Foreground="White" Content="CPF Aluno:" HorizontalAlignment="Left" Margin="618,83,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="43" Width="210" FontSize="20"/>
+        <TextBox x:Name="TextBoxCPF" TabIndex="2" Text="{Binding SelectedMatricula.Cpf}" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="618,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="23" FontSize="16"/>
+        <Button Content="Pesquisar" Command="{Binding PesquisarAlunoCPFCommand}" CommandParameter="{Binding Text, ElementName=TextBoxCPF}" HorizontalAlignment="Left" Margin="796,121,0,0" VerticalAlignment="Top" Width="57" Height="23" />
+        <Label x:Name="LabelColaborador" Foreground="White" Content="Id Colaborador:" HorizontalAlignment="Left" Margin="26,163,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="44" Width="186" FontSize="20"/>
+        <TextBox x:Name="TextBoxIdColaborador" Text="{Binding ColaboradorId}" TabIndex="3" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="31,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" Height="24" FontSize="16" RenderTransformOrigin="0.727,1.21"/>
+        <Label x:Name="LabelPlano" Foreground="White" Content="Plano:" HorizontalAlignment="Left" Margin="218,163,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="44" Width="161" FontSize="20"/>
+        <Label x:Name="LabelEntrada" Foreground="White" Content="Entrada:" HorizontalAlignment="Left" Margin="611,162,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="40" Width="168" FontSize="20"/>
+        <DatePicker x:Name="DatePickerEntrada" SelectedDate="{Binding DataInicio, Mode=TwoWay}" TabIndex="4" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="616,202,0,0" VerticalAlignment="Top" Width="263"/>
+        <Label x:Name="LabelSaida" Foreground="White" Content="Saída:" HorizontalAlignment="Left" Margin="616,239,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="36" Width="188" FontSize="20"/>
+        <DatePicker x:Name="DatePickerSaida" SelectedDate="{Binding DataFim, Mode=TwoWay}" TabIndex="5" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="616,275,0,0" VerticalAlignment="Top" Width="261" RenderTransformOrigin="0.56,-0.854"/>
+        <Label x:Name="LabelObjetivo" Foreground="White" Content="Objetivo:" HorizontalAlignment="Left" Margin="33,322,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="47" Width="212" FontSize="20"/>
+        <TextBox x:Name="TextBoxObjetivo" Text="{Binding Objetivo}" TabIndex="10" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="33,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="394" Height="95" FontFamily="Arial"/>
+        <Label x:Name="LabelObservacaoRestricao" Foreground="White" Content="Observação Restrição:" HorizontalAlignment="Left" Margin="461,322,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="42" Width="299" FontSize="20"/>
+        <TextBox x:Name="TextBoxObservacaoRestricao"  Text="{Binding ObsRestricao}" TabIndex="11" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="461,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" Height="95" FontFamily="Arial"/>
+        <Button x:Name="ButtonSalvar" Command="{Binding SalvarMatriculaCommand}" Foreground="White" Background="#FFA97B14" Content="Salvar" HorizontalAlignment="Left" Margin="667,519,0,0" VerticalAlignment="Top" Height="42" Width="212" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Black" FontSize="20"/>
+        <Label x:Name="LabelRestricao" Foreground="White" Content="Restrição:" HorizontalAlignment="Left" Margin="31,237,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="40" Width="214" FontSize="20"/>
+        <Label x:Name="LabelLaudoMedico" Foreground="White" Content="Laudo Médico:" HorizontalAlignment="Left" Margin="420,162,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="44" Width="186" FontSize="20"/>
+        <Button x:Name="ButtonLaudoMedico" Content="Selecionar Foto" Command="{Binding SelecionarLaudoCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="425,200,0,0" Width="94" Height="26"/>
+        <Image Source="{Binding LaudoMedico, Converter={StaticResource ByteArrayToImageConverter}}" Width="73" Height="66" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="427,237,0,0"/>
+        <ComboBox x:Name="ComboBoxRestricao" Text="{Binding RestricaoMedica}" HorizontalAlignment="Left" Margin="33,275,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboBoxPlano" Text="{Binding Plano}" HorizontalAlignment="Left" Margin="217,202,0,0" VerticalAlignment="Top" Width="162" Height="24"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="12,13,0,0" Stroke="orange" VerticalAlignment="Top" Width="1054"/>
+        <Rectangle HorizontalAlignment="Left" Height="502" Margin="12,72,0,0" Stroke="orange" VerticalAlignment="Top" Width="1054" RenderTransformOrigin="0.5,0.5"/>
+    </Grid>
+</Window>

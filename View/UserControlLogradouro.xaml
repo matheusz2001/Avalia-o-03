@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="Avaliação_02.View.UserControlLogradouro"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Avaliação_02.View"
+             xmlns:resources="clr-namespace:Avaliação_02.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Label x:Name="LabelID" Foreground="White" Content="Id:" HorizontalAlignment="Left" Margin="13,21,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="40" Width="156" FontSize="20"/>
+        <TextBox x:Name="TextBoxID"  Text="{Binding SelectedLogradouro.Id}" TabIndex="7" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="17,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Height="25" FontSize="20" IsEnabled="False" FontFamily="Segoe UI Black"/>
+        <Label x:Name="LabelCEP" Foreground="White" Content="CEP:" HorizontalAlignment="Left" Margin="202,23,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="38" Width="160" FontSize="20"/>
+        <TextBox x:Name="TextBoxCEP" Text="{Binding SelectedLogradouro.Cep}" TabIndex="8" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="202,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="26" FontSize="16"/>
+        <Button Content="Filtrar" Command="{Binding FiltrarLogradouroCommand}" CommandParameter="{Binding Text, ElementName=TextBoxCEP}" HorizontalAlignment="Left" Margin="305,60,0,0" VerticalAlignment="Top" Width="57" Height="23" />
+        <Label x:Name="LabelLougradouro" Foreground="White" Content="Lougradouro:" HorizontalAlignment="Left" Margin="400,22,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="38" Width="234" FontSize="20"/>
+        <TextBox x:Name="TextBoxLogradouro"  Text="{Binding SelectedLogradouro.Nome}" TabIndex="9" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="400,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Height="26" FontSize="16"/>
+        <Label x:Name="LabelBairro" Foreground="White" Content="Bairro:" HorizontalAlignment="Left" Margin="13,93,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="43" Width="138" FontSize="20"/>
+        <TextBox x:Name="TextBoxBairro" Text="{Binding SelectedLogradouro.Bairro}" TabIndex="10" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="17,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Height="23" FontSize="16"/>
+        <Label x:Name="LabelCidade" Foreground="White" Content="Cidade:" HorizontalAlignment="Left" Margin="400,96,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="40" Width="175" FontSize="20"/>
+        <ComboBox x:Name="ComboBoxCidades" Text="{Binding SelectedLogradouro.Cidade}" TabIndex="11" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="400,130,0,0" VerticalAlignment="Top" Width="279" Height="22">
+            <ComboBoxItem>Florianópolis</ComboBoxItem>
+            <ComboBoxItem>Joinville</ComboBoxItem>
+            <ComboBoxItem>Blumenau</ComboBoxItem>
+            <ComboBoxItem>São José</ComboBoxItem>
+            <ComboBoxItem>Chapecó</ComboBoxItem>
+            <ComboBoxItem>Itajaí</ComboBoxItem>
+            <ComboBoxItem>Criciúma</ComboBoxItem>
+            <ComboBoxItem>Lages</ComboBoxItem>
+            <ComboBoxItem>Jaraguá do Sul</ComboBoxItem>
+            <ComboBoxItem>Palhoça</ComboBoxItem>
+            <ComboBoxItem>Balneário Camboriú</ComboBoxItem>
+            <ComboBoxItem>Brusque</ComboBoxItem>
+            <ComboBoxItem>Tubarão</ComboBoxItem>
+            <ComboBoxItem>Caçador</ComboBoxItem>
+            <ComboBoxItem>Rio do Sul</ComboBoxItem>
+            <ComboBoxItem>Araranguá</ComboBoxItem>
+            <ComboBoxItem>São Bento do Sul</ComboBoxItem>
+            <ComboBoxItem>Camboriú</ComboBoxItem>
+            <ComboBoxItem>Gaspar</ComboBoxItem>
+            <ComboBoxItem>Concórdia</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="LabelUF" Foreground="White" Content="UF:" HorizontalAlignment="Left" Margin="13,166,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="39" Width="94" FontSize="20"/>
+        <ComboBox x:Name="ComboBoxUF" Text="{Binding SelectedLogradouro.Uf}" TabIndex="12" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="17,201,0,0" VerticalAlignment="Top" Width="62" Height="24">
+            <ComboBoxItem>SC</ComboBoxItem>
+            <ComboBoxItem>AC</ComboBoxItem>
+            <ComboBoxItem>AL</ComboBoxItem>
+            <ComboBoxItem>AP</ComboBoxItem>
+            <ComboBoxItem>AM</ComboBoxItem>
+            <ComboBoxItem>BA</ComboBoxItem>
+            <ComboBoxItem>CE</ComboBoxItem>
+            <ComboBoxItem>DF</ComboBoxItem>
+            <ComboBoxItem>ES</ComboBoxItem>
+            <ComboBoxItem>GO</ComboBoxItem>
+            <ComboBoxItem>MA</ComboBoxItem>
+            <ComboBoxItem>MT</ComboBoxItem>
+            <ComboBoxItem>MS</ComboBoxItem>
+            <ComboBoxItem>MG</ComboBoxItem>
+            <ComboBoxItem>PA</ComboBoxItem>
+            <ComboBoxItem>PB</ComboBoxItem>
+            <ComboBoxItem>PR</ComboBoxItem>
+            <ComboBoxItem>PE</ComboBoxItem>
+            <ComboBoxItem>PI</ComboBoxItem>
+            <ComboBoxItem>RJ</ComboBoxItem>
+            <ComboBoxItem>RN</ComboBoxItem>
+            <ComboBoxItem>RS</ComboBoxItem>
+            <ComboBoxItem>RO</ComboBoxItem>
+            <ComboBoxItem>RR</ComboBoxItem>
+            <ComboBoxItem>SP</ComboBoxItem>
+            <ComboBoxItem>SE</ComboBoxItem>
+            <ComboBoxItem>TO</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="LabelPais" Foreground="White" Content="País:" HorizontalAlignment="Left" Margin="148,166,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="47" Width="129" FontSize="20"/>
+        <ComboBox x:Name="ComboBoxPais" Text="{Binding SelectedLogradouro.Pais}" TabIndex="13" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="148,201,0,0" VerticalAlignment="Top" Width="129" Height="24">
+            <ComboBoxItem>Brasil</ComboBoxItem>
+            <ComboBoxItem>Japão</ComboBoxItem>
+            <ComboBoxItem>Argentina</ComboBoxItem>
+            <ComboBoxItem>Estados Unidos</ComboBoxItem>
+            <ComboBoxItem>Canadá</ComboBoxItem>
+            <ComboBoxItem>México</ComboBoxItem>
+            <ComboBoxItem>Alemanha</ComboBoxItem>
+            <ComboBoxItem>França</ComboBoxItem>
+            <ComboBoxItem>Itália</ComboBoxItem>
+            <ComboBoxItem>Espanha</ComboBoxItem>
+            <ComboBoxItem>Reino Unido</ComboBoxItem>
+            <ComboBoxItem>China</ComboBoxItem>
+            <ComboBoxItem>Austrália</ComboBoxItem>
+            <ComboBoxItem>Índia</ComboBoxItem>
+            <ComboBoxItem>Rússia</ComboBoxItem>
+            <ComboBoxItem>Portugal</ComboBoxItem>
+            <ComboBoxItem>Chile</ComboBoxItem>
+            <ComboBoxItem>Uruguai</ComboBoxItem>
+            <ComboBoxItem>Paraguai</ComboBoxItem>
+            <ComboBoxItem>Peru</ComboBoxItem>
+            <ComboBoxItem>Colômbia</ComboBoxItem>
+            <ComboBoxItem>Venezuela</ComboBoxItem>
+            <ComboBoxItem>África do Sul</ComboBoxItem>
+            <ComboBoxItem>Coreia do Sul</ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</UserControl>

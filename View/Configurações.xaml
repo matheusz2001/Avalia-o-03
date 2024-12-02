@@ -1,0 +1,35 @@
+﻿<Page x:Class="Avaliação_02.Configurações"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Avaliação_02" xmlns:System="clr-namespace:System;assembly=netstandard"
+      mc:Ignorable="d" 
+      d:DesignHeight="450"
+      Title="Configurações" Width="871">
+
+    <Grid Background="#23262B">
+        <!-- text main -->
+        <Label Content="Configurações" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Black" FontSize="25"/>
+
+        <!-- idioma -->
+        <Label Content="Idioma/Região" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Black" FontSize="15"/>
+        <ComboBox x:Name="combo_box_idioma" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="25,115,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="combo_box_idioma_SelectionChanged">
+            <ComboBoxItem Content="pt-BR"/>
+            <ComboBoxItem Content="es-ES"/>
+            <ComboBoxItem Content="en-US"/>
+        </ComboBox>
+        <!--- Salvar-->
+        <Button x:Name="button_salvar" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" Content="Salvar" HorizontalAlignment="Left" Margin="25,165,0,0" VerticalAlignment="Top" Width="120" Click="button_salvar_Click"/>
+        <Button x:Name="button_config_fechar" TabIndex="3" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus"  Background="#FF8A1414" FontSize="48" Content="Button" HorizontalAlignment="Left" Margin="160,58,0,0" VerticalAlignment="Top" Width="25" Click="button_config_fechar_Click" Height="17"/>
+
+        <Label x:Name="labelProvider" Content="Provider:" HorizontalAlignment="Left" Margin="231,80,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4" Height="26" Width="130"/>
+        <ComboBox x:Name="comboBoxProvider" HorizontalAlignment="Left" Margin="231,111,0,0" VerticalAlignment="Top" Width="200" SelectedIndex="0">
+            <System:String>System.Data.SqlClient</System:String>
+        </ComboBox>
+        <Label x:Name="labelStrConexao" Content="String de Conexão:" HorizontalAlignment="Left" Margin="231,140,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4" Height="26" Width="130"/>
+        <TextBox x:Name="textBoxStringDeConexao" Text="Server=localhost;Database=db_academia;Uid=coelho;Pwd=abcBolinhas12345;TrustServerCertificate=True;" HorizontalAlignment="Left" Margin="231,170,0,0" VerticalAlignment="Top" Width="603" />
+        <Button x:Name="salvaBD" Content="Salvar BD" HorizontalAlignment="Left" Margin="231,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,-0.972" Width="120" Click="SalvaBD_Click"/>
+        <Button x:Name="encerrarAplicacao" Content="Encerrar Aplicação" HorizontalAlignment="Left" Margin="231,258,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.045,-0.972" Width="120" Click="EncerrarAplicacao_Click" />
+    </Grid>
+</Page>

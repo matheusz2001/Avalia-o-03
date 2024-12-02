@@ -1,0 +1,42 @@
+﻿<Window x:Class="Avaliação_02.View.WindowColaborador"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avaliação_02.View"
+        xmlns:resources="clr-namespace:Avaliação_02.Properties"
+        mc:Ignorable="d"
+        Title="WindowColaborador" Background="#23262B" Height="740" Width="1082">
+
+    <Grid Margin="0,0,-60,-135">
+        <Label x:Name="LabelCadastrarColaborador" Foreground="White" Content="Cadastrar Colaborador" HorizontalAlignment="Left" Margin="28,22,0,0" VerticalAlignment="Top" FontSize="25" FontFamily="Segoe UI Black"/>
+        <Label x:Name="LabelID" Foreground="White" Content="ID:" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="36" Width="172" FontSize="20"/>
+        <TextBox x:Name="TextBoxID" Text="{Binding Id}" TabIndex="0" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="32,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Height="24" FontSize="16" IsEnabled="False"/>
+        <Label x:Name="LabelCPF" Foreground="White" Content="CPF:" HorizontalAlignment="Left" Margin="211,120,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="36" Width="94" FontSize="20"/>
+        <TextBox x:Name="TextBoxCPF" Text="{Binding Cpf}" TabIndex="1" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="211,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Height="24" FontSize="16"/>
+        <Label x:Name="LabelTelefonePessoa" Foreground="White" Content="Telefone:" HorizontalAlignment="Left" Margin="367,120,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="36" Width="146" FontSize="20"/>
+        <TextBox x:Name="TextBoxTelefone" Text="{Binding Telefone}" TabIndex="2" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="367,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" Height="24" FontSize="16"/>
+        <Label x:Name="LabelNome" Foreground="White" Content="Nome:" HorizontalAlignment="Left" Margin="30,186,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="48" Width="142" FontSize="20"/>
+        <TextBox x:Name="TextBoxNome" Text="{Binding Nome}" TabIndex="3" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="32,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="625" Height="24" FontSize="16"/>
+        <Label x:Name="LabelEmailPessoa" Foreground="White" Content="E-mail:" HorizontalAlignment="Left" Margin="216,251,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="45" Width="320" FontSize="20"/>
+        <TextBox x:Name="TextBoxEmail" Text="{Binding Email}" TabIndex="5" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="216,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="388" Height="26" FontSize="16"/>
+        <Label x:Name="LabelNascimentoPessoa" Foreground="White" Content="Nascimento:" HorizontalAlignment="Left" Margin="28,254,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="38" Width="163" FontSize="20"/>
+        <DatePicker x:Name="DatePickerNascimento" SelectedDate="{Binding Nascimento, Mode=TwoWay}" TabIndex="4" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="32,290,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LabelAdmissao" Foreground="White" Content="Admissão:" HorizontalAlignment="Left" Margin="697,120,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="44" Width="120" FontSize="20"/>
+        <DatePicker x:Name="DatePickerAdmissao" SelectedDate="{Binding Admissao, Mode=TwoWay}" HorizontalAlignment="Left" Margin="697,156,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelTipo" Content="Tipo:" HorizontalAlignment="Left" Margin="697,186,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" Width="92" Height="40"/>
+        <ComboBox x:Name="ComboBoxTipo" HorizontalAlignment="Left" Margin="697,222,0,0" VerticalAlignment="Top" Width="154" SelectedItem="{Binding Tipo}" Height="24"/>
+        <Label x:Name="labelVinculo" Content="Vínculo:" HorizontalAlignment="Left" Margin="697,254,0,0" VerticalAlignment="Top" Foreground="White" Height="54" Width="114" FontFamily="Segoe UI Black" FontSize="20"/>
+        <ComboBox x:Name="ComboBoxVinculo" HorizontalAlignment="Left" Margin="697,290,0,0" VerticalAlignment="Top" Width="154" SelectedItem="{Binding Vinculo}" Height="24"/>
+        <local:UserControlLogradouro Margin="14,312,538,298" />
+        <Label x:Name="LabelNumeroPessoa" Foreground="White" Content="Número:" HorizontalAlignment="Left" Margin="26,582,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="34" Width="114" FontSize="20"/>
+        <TextBox x:Name="TextBoxNumero" Text="{Binding Numero}" TabIndex="14" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="28,620,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Height="22" FontSize="16"/>
+        <Label x:Name="LabelComplementoPessoa" Foreground="White" Content="Complemento:" HorizontalAlignment="Left" Margin="160,580,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" RenderTransformOrigin="1.178,0.797" Height="42" Width="186" FontSize="20"/>
+        <TextBox x:Name="TextBoxComplemento" Text="{Binding Complemento}" TabIndex="15" GotFocus="Box_GotFocus" LostFocus="Box_LostFocus" HorizontalAlignment="Left" Margin="162,622,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Height="22" FontSize="16"/>
+        <Label x:Name="LabelSenha" Content="Senha:" Foreground="White" HorizontalAlignment="Left" Margin="697,331,0,0" VerticalAlignment="Top" Width="128" FontFamily="Segoe UI Black" FontSize="20"/>
+        <TextBox x:Name="TextBoxSenha"  Text="{Binding Senha}" HorizontalAlignment="Left" Margin="697,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Height="24"/>
+        <Button x:Name="ButtonSalvar" Command="{Binding SalvarColaboradorCommand}" Foreground="White" Background="#FFA97B14" TabIndex="16" Content="Salvar" HorizontalAlignment="Left" Margin="406,602,0,0" VerticalAlignment="Top" Height="42" Width="212" FontFamily="Segoe UI Black" FontSize="20"/>
+        <Rectangle HorizontalAlignment="Left" Height="67" Margin="10,10,0,0" Stroke="Orange" VerticalAlignment="Top" Width="1036"/>
+        <Rectangle HorizontalAlignment="Left" Height="601" Margin="10,87,0,0" Stroke="Orange" VerticalAlignment="Top" Width="1036"/>
+    </Grid>
+</Window>

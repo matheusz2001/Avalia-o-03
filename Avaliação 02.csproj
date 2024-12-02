@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Avaliação_02</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <BaseOutputPath>C:\Users\Matheus\Desktop\Avaliação 02\Avaliação 02\Avaliação 02\Documentação</BaseOutputPath>
+    <Title>Extended.Wpf.Toolkit</Title>
+    <PackageReleaseNotes>
+
+
+</PackageReleaseNotes>
+    <PackageId>Extended.Wpf.Toolki</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="aiplugin_57f2bef1-1f44-4d2c-8d41-2450619894c4.png" />
+    <None Remove="aluno.ico" />
+    <None Remove="artpoin-emoji-para-whatsapp67.png" />
+    <None Remove="aulas.ico" />
+    <None Remove="avaliação.ico" />
+    <None Remove="config.ico" />
+    <None Remove="frequencia.ico" />
+    <None Remove="local.ico" />
+    <None Remove="login.ico" />
+    <None Remove="menu.ico" />
+    <None Remove="registrar.ico" />
+    <None Remove="senha.ico" />
+    <None Remove="trabalhador.ico" />
+    <None Remove="treinos.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.6.1" />
+    <PackageReference Include="itext" Version="9.0.0" />
+    <PackageReference Include="itext.bouncy-castle-adapter" Version="9.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="aiplugin_57f2bef1-1f44-4d2c-8d41-2450619894c4.png" />
+    <Resource Include="aluno.ico" />
+    <Resource Include="artpoin-emoji-para-whatsapp67.png" />
+    <Resource Include="aulas.ico" />
+    <Resource Include="avaliação.ico" />
+    <Resource Include="config.ico" />
+    <Resource Include="frequencia.ico" />
+    <Resource Include="local.ico" />
+    <Resource Include="login.ico" />
+    <Resource Include="menu.ico" />
+    <Resource Include="registrar.ico" />
+    <Resource Include="senha.ico" />
+    <Resource Include="trabalhador.ico" />
+    <Resource Include="treinos.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Idioma.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Idioma.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Idioma.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Idioma.es-ES.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Idioma.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Idioma.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

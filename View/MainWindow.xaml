@@ -1,0 +1,161 @@
+﻿<Window x:Class="Avaliação_02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avaliação_02"
+        xmlns:resources="clr-namespace:Avaliação_02.Properties"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="872"
+        Width="1447"
+        WindowStyle="None"
+        AllowsTransparency="true"
+        WindowStartupLocation="CenterScreen">
+        
+    <!--// Backgroud //-->
+
+    <Grid Background="#23262B" Margin="34,0,0,-98" RenderTransformOrigin="0.517,0.497">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="345*"/>
+            <RowDefinition Height="527*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="202*"/>
+            <ColumnDefinition Width="115*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--// menu painel //-->
+
+        <StackPanel Background="#2E333A"
+                    Orientation="Vertical" Margin="-58,0,155,-1" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.144"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.998"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+
+            <!--- Nome Menu -->
+            <Grid Height="50"
+              VerticalAlignment="Top"
+              Margin="0,30,0,0">
+
+                <Border Background="#D61734"
+                    Height="25"
+                    CornerRadius="3,0,0,3"
+                    Width="6"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right" />
+
+                <TextBlock Text="ACADEMIA DO ZÉ "
+                   Foreground="#FFFFFF"
+                   FontFamily="Segoe UI Black" FontSize="20"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
+
+            </Grid>
+            <Menu Height="849"
+                  Background="Transparent"
+                  Width="224" RenderTransformOrigin="0.52,0.5">
+
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical" />
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+
+                <!-- Button - Home -->
+
+                <Button x:Name="button_home"  Content="{x:Static resources:Idioma.txtHome}" Height="63" Width="227" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_home_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/menu.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+
+                <!-- Button - Logradouro -->
+
+                <Button x:Name="button_logradouro" Content="{x:Static resources:Idioma.txtLogradouro}" Height="63" Width="227" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_logradouro_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/local.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+
+                <!-- Button - Aluno -->
+
+                <Button x:Name="button_aluno" Content="{x:Static resources:Idioma.txtAluno}" Height="63" Width="223" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_aluno_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/aluno.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+
+                <!-- Button - Colaborador -->
+
+                <Button x:Name="button_colaborador" Content="{x:Static resources:Idioma.txtColaborador}" Height="63" Width="223" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_colaborador_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/trabalhador.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+
+                <!-- Button - Senha -->
+                <Button x:Name="button_senha" Content="{x:Static resources:Idioma.txtSenha}" Height="63" Width="223" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_senha_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/senha.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+
+                <!-- Button - Matricula -->
+                <Button x:Name="button_matricula" Content="{x:Static resources:Idioma.txtMatricula}" Height="63" Width="223" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_matricula_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/registrar.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+
+                <!-- Button - Avaliação -->
+                <Button x:Name="button_avaliacao" Content="{x:Static resources:Idioma.txtAvaliacao}" Height="63" Width="223" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_avaliacao_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/avaliação.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+
+                <!-- Button - Frequência -->
+                <Button x:Name="button_frequencia" Content="{x:Static resources:Idioma.txtFrequencia}" Height="63" Width="223" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_frequencia_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/frequencia.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+
+                <!-- Button - Aulas -->
+                <Button x:Name="button_aulas" Content="{x:Static resources:Idioma.txtAulas}" Height="63" Width="223" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_aulas_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/aulas.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+                <!-- Button - Treinos -->
+                <Button x:Name="button_treinos" Content="{x:Static resources:Idioma.txtTrenos}" Height="63" Width="223" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_treinos_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/treinos.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+
+                <!-- Button - Login -->
+                <Button x:Name="button_login" Content="{x:Static resources:Idioma.txtLogin}" Height="63" Width="223" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_login_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/login.ico"  Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+                <!-- Button - Config -->
+                <Button x:Name="button_configuracoes" Content="{x:Static resources:Idioma.txtConfiguracoes}" Height="63" Width="223" Foreground="White" FontFamily="Segoe UI Black" FontSize="20" IsCancel="True" Click="button_configuracoes_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/config.ico" Stretch="Uniform" AlignmentX="Left"/>
+                    </Button.Background>
+                </Button>
+            </Menu>
+            <!--// Main menu //-->
+        </StackPanel>
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" Margin="226,0,0,10" Grid.RowSpan="2" Navigated="MainFrame_Navigated"/>
+    </Grid>
+</Window>
